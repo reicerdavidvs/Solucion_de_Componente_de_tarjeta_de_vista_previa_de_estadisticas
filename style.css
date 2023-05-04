@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap');
+
+:root {
+    /* ### Primary */
+
+    --Very_dark_blue: hsl(233, 47%, 7%);
+    /*(main_background)*/
+    --Dark_desaturated_blue: hsl(244, 38%, 16%);
+    /*(card background)*/
+    --Soft_violet: hsl(277, 64%, 61%);
+    /*(accent)*/
+
+    /* ### Neutral */
+
+    --White: hsl(0, 0%, 100%);
+    /*(main heading, stats)*/
+    --Slightly_transparent_whiteP: hsla(0, 0%, 100%, 0.75);
+    /*(main paragraph)*/
+    --Slightly_transparent_whiteS: hsla(0, 0%, 100%, 0.6);
+    /*(stat headings)*/
+    --Layer:rgba(110,30,160,0.5);
+}
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 15px;
+    
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--Very_dark_blue);
+}
+main{
+    height: 782px;
+    width: 328px;
+    background-color: var(--Dark_desaturated_blue);
+    margin: 88px auto;
+    border-radius: 10px;
+    overflow: hidden;
+}
+/*SECTION 1 -----------------------------------*/
+.image{
+    background-image: url("images/image-header-mobile.jpg");
+    background-size: cover;
+    width: 100%;
+    height: 240px;
+}
+#layer{
+    background-color: var(--Layer);
+    width: 100%;
+    height: 100%;
+}
+/*SECTION 2 -----------------------------------*/
+.section2{
+    padding: 40px 33px;
+    text-align: center;
+}
+h1{
+    color: var(--White);
+    height: 115px;
+    font-size: 1.8em;
+    font-family: 'Inter', sans-serif;
+}
+span{
+    color: var(--Soft_violet);
+}
+p{
+    color: var(--Slightly_transparent_whiteP);
+    font-size: 1em;
+    line-height: 25px;
+    height: 137px;
+}
+.stats{
+    color: var(--Slightly_transparent_whiteS);
+    line-height: 25px;
+    margin-top: 18px;
+}
+.amount{
+    font-weight: 700;
+    font-size: 1.45em;
+    color: var(--White);
+}
+.concept{
+    text-transform: uppercase;
+    font-size: 0.8em;
+    margin-bottom: 33px;
+}
+.last{
+    text-transform: uppercase;
+}
+
+
+/*FOOTER -----------------------------*/
+.attribution {
+    font-size: 14px;
+    text-align: center;
+    margin-bottom: 80px;
+    color: var(--White);
+}
+
+.attribution a {
+    color: var(--Soft_violet);
+}
+/*VISTA EN DESKTOP ---------------------*/
+@media only screen and (min-width:1200px) {
+    main{
+        width: 1110px;
+        height: 448px;
+        display: flex;
+        flex-direction: row-reverse;
+        margin: 178px auto;
+    }
+    .image{
+        width: 540px;
+        height: 100%;
+        background-image: url("images/image-header-desktop.jpg");
+
+    }
+    .section2{
+        padding: 75px 70px;
+        text-align: left;
+    }
+    h1{
+        font-size: 2.5em;
+    }
+    p{
+        margin-right: 70px;
+    }
+    .stats{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 70px;
+
+    }
+}
